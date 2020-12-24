@@ -62,7 +62,7 @@ public class Poker {
 
     @Override
     public String toString() {
-        return color + name + "\u001B[31m";
+        return color + name + "\u001B[30m";
     }
 
 }
