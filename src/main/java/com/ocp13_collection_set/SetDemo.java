@@ -1,4 +1,4 @@
-package com.ocp13;
+package com.ocp13_collection_set;
 
 import java.util.HashSet;
 import java.util.LinkedHashSet;
@@ -7,12 +7,12 @@ import java.util.TreeSet;
 
 public class SetDemo {
     public static void main(String[] args) {
-        Set set = new HashSet(); // ¯S©Ê:¤¸¯À¤§¶¡ªºÂ\©ñ¬O«ö·ÓHashCode¨Ó¨M©w, ´£°ª¤¸¯À¬d¸ßªº®Ä²v
-        set.add("°ê¤å"); // String
-        set.add(100); // ¤£¬O int ¦Ó¬O Integer
-        set.add("­^¤å"); // String
+        Set set = new HashSet(); // ï¿½Sï¿½ï¿½:ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\ï¿½ï¿½Oï¿½ï¿½ï¿½ï¿½HashCodeï¿½Ó¨Mï¿½w, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½dï¿½ßªï¿½ï¿½Ä²v
+        set.add("ï¿½ï¿½ï¿½"); // String
+        set.add(100); // ï¿½ï¿½ï¿½O int ï¿½Ó¬O Integer
+        set.add("ï¿½^ï¿½ï¿½"); // String
         set.add(Integer.valueOf("100")); // Integer
-        set.add("¼Æ¾Ç"); // String
+        set.add("ï¿½Æ¾ï¿½"); // String
         set.add(new Integer("90")); // Integer
         System.out.println(set);
         // for-loop
@@ -22,7 +22,7 @@ public class SetDemo {
         // Java 8 foreach
         set.forEach(e -> System.out.println(e));
         set.forEach(System.out::println);
-        // ¸ê®Æªø«×(¤¸¯À­Ó¼Æ)
+        // ï¿½ï¿½Æªï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½Ó¼ï¿½)
         System.out.println(set.size());
     }
 }

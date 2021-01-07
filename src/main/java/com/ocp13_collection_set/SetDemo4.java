@@ -1,4 +1,4 @@
-package com.ocp13;
+package com.ocp13_collection_set;
 
 import java.util.LinkedHashSet;
 import java.util.Set;
@@ -9,42 +9,42 @@ public class SetDemo4 {
     public static void main(String[] args) {
         Set<Exam> exams = new LinkedHashSet<>();
         IntStream.rangeClosed(1, 20).forEach(i -> exams.add(new Exam()));
-        System.out.println("¥þ¯Z¦¨ÁZ: " + exams);
-        System.out.println("1. °ê¤å¥­§¡");
-        // ¦L¥X©Ò¦³°ê¤å¦¨ÁZ
+        System.out.println("ï¿½ï¿½ï¿½Zï¿½ï¿½ï¿½Z: " + exams);
+        System.out.println("1. ï¿½ï¿½å¥­ï¿½ï¿½");
+        // ï¿½Lï¿½Xï¿½Ò¦ï¿½ï¿½ï¿½å¦¨ï¿½Z
         exams.stream()
                 .mapToInt(e -> e.getChinese())
                 .forEach(score -> System.out.print(score + ", "));
-        // ­pºâ°ê¤å¥­§¡
+        // ï¿½pï¿½ï¿½ï¿½å¥­ï¿½ï¿½
         double avg_chinese = exams.stream()
                 .mapToInt(e -> e.getChinese())
                 .average()
                 .getAsDouble();
-        System.out.println("¥­§¡: " + avg_chinese);
-        System.out.println("2. ­^¤å¥­§¡");
-        // ¦L¥X©Ò¦³­^¤å¦¨ÁZ
+        System.out.println("ï¿½ï¿½ï¿½ï¿½: " + avg_chinese);
+        System.out.println("2. ï¿½^ï¿½å¥­ï¿½ï¿½");
+        // ï¿½Lï¿½Xï¿½Ò¦ï¿½ï¿½^ï¿½å¦¨ï¿½Z
         exams.stream()
                 .mapToInt(e -> e.getEnglish())
                 .forEach(score -> System.out.print(score + ", "));
-        // ­pºâ­^¤å¥­§¡
+        // ï¿½pï¿½ï¿½^ï¿½å¥­ï¿½ï¿½
         double avg_english = exams.stream()
                 .mapToInt(e -> e.getEnglish())
                 .average()
                 .getAsDouble();
-        System.out.println("¥­§¡: " + avg_english);
-        System.out.println("3. ¼Æ¾Ç¥­§¡ (½Ð¦P¾Ç¦Û¦æ¼¶¼g)");
-        System.out.print("4. °ê¤å³Ì°ª¤À¬°¦ó : ");
+        System.out.println("ï¿½ï¿½ï¿½ï¿½: " + avg_english);
+        System.out.println("3. ï¿½Æ¾Ç¥ï¿½ï¿½ï¿½ (ï¿½Ð¦Pï¿½Ç¦Û¦æ¼¶ï¿½g)");
+        System.out.print("4. ï¿½ï¿½ï¿½Ì°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ");
         int max_chinese = exams.stream()
                 .mapToInt(e -> e.getChinese())
                 .max()
                 .getAsInt();
         System.out.println(max_chinese);
-        System.out.print("5. °ê¤å³Ì°ª¤Àªº¤H¦W¬°¦ó : ");
+        System.out.print("5. ï¿½ï¿½ï¿½Ì°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Hï¿½Wï¿½ï¿½ï¿½ï¿½ : ");
         exams.stream()
                 .filter(e -> e.getChinese() == max_chinese)
                 .forEach(e -> System.out.print(e.getName() + ", "));
         System.out.println();
-        System.out.print("6. Á`¦¨ÁZ³Ì°ªªº¤H¦W¬°¦ó?¬O´X¤À? ");
+        System.out.print("6. ï¿½`ï¿½ï¿½ï¿½Zï¿½Ì°ï¿½ï¿½ï¿½ï¿½Hï¿½Wï¿½ï¿½ï¿½ï¿½?ï¿½Oï¿½Xï¿½ï¿½? ");
         int max_score = exams.stream()
                 .mapToInt(e -> e.getChinese()+e.getEnglish()+e.getMath())
                 .max()

@@ -1,4 +1,4 @@
-package com.ocp13;
+package com.ocp13_collection_set;
 
 import java.util.HashSet;
 import java.util.LinkedHashSet;
@@ -9,17 +9,17 @@ import java.util.TreeSet;
 public class SetDemo2 {
     public static void main(String[] args) {
         Set set = new TreeSet(); //LinkedHashSet(); // HashSet();
-        // ¤µ±m539, 1~39¤¤¨ú5­Ó¤£­«½Æªº¼Æ¦r
-        // ¹q¸£¿ï¸¹
+        // ï¿½ï¿½ï¿½m539, 1~39ï¿½ï¿½ï¿½ï¿½5ï¿½Ó¤ï¿½ï¿½ï¿½ï¿½Æªï¿½ï¿½Æ¦r
+        // ï¿½qï¿½ï¿½ï¿½ï¸¹
         while (set.size() < 5) {            
-            // ²£¥Í¤@­Ó 1~39 ªºÀH¾÷¼Æ
+            // ï¿½ï¿½ï¿½Í¤@ï¿½ï¿½ 1~39 ï¿½ï¿½ï¿½Hï¿½ï¿½ï¿½ï¿½
             int n = new Random().nextInt(39)+1;
             set.add(n);
-            System.out.println("¥[¤J ==> " + n);
+            System.out.println("ï¿½[ï¿½J ==> " + n);
         }
         
         System.out.println(set);
-        // ±m²yªº¸¹½XÁ`©M ?
+        // ï¿½mï¿½yï¿½ï¿½ï¿½ï¿½ï¿½Xï¿½`ï¿½M ?
         // Java 7 for-loop
         int sum = 0;
         for(Object obj : set) {
@@ -31,7 +31,7 @@ public class SetDemo2 {
         // Java 8
         int sum2 = set.stream().mapToInt(e -> ((Integer)e).intValue()).sum();
         System.out.println(sum2);
-        int sum3 = set.stream().mapToInt(e -> (Integer)e).sum(); // Java 5 ¤§«á¥i¥H¬Ù²¤ intValue() ªº½Õ¥Î
+        int sum3 = set.stream().mapToInt(e -> (Integer)e).sum(); // Java 5 ï¿½ï¿½ï¿½ï¿½iï¿½Hï¿½Ù²ï¿½ intValue() ï¿½ï¿½ï¿½Õ¥ï¿½
         System.out.println(sum3);
     }
 }
