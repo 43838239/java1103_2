@@ -1,4 +1,4 @@
-package com.ocp21_;
+package com.ocp21_ATM;
 
 public class Account {
     private int money;
@@ -16,7 +16,10 @@ public class Account {
     }
 
     // 提款 x
-    public void withdraw(int x) {
+    //誰 (執行續)先執行到此方法,該物件就歸誰掌管,其他人(執行續)則在外面排隊
+    //Synchronized 是保證一次只會有一個人進來提款
+    
+    public synchronized void withdraw(int x) {
         String name = Thread.currentThread().getName();
         System.out.printf("%s 進來提款了\n", name);
         // 取得帳戶餘額
